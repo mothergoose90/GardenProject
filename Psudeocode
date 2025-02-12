@@ -1,0 +1,187 @@
+Input Interface of “Welcome”
+ARRAY holds: Lettuce, Tomato, Onion, Cucumber, Corn, Potato, Soy bean, Thyme
+Void welcomeDisplay
+Input Interface of “DayTaken” to show a random date that is taken
+Input “Random” package to generate random days
+Int randDay
+Int randMonth
+Int randHour
+Int year
+Void dayDisplay
+Void changeDay that takes ranDay, randMonth, randHour
+Input “Scanner” package to read user input
+Input “File” package to make file
+Input “FileWriter” to write to file
+Input “IOException” to throw expectations
+Input class “CreateFile” that creates the file “Receipt.txt”
+Public void “fileMake”
+   IF the file is created
+	Tells user the file was created
+   ELSE
+	Tells user the file already exists
+   CATCH
+	If an error occurrs
+Input class “Write” to write on the file “Receipt.txt”
+Calls class “Info”
+Calls class “Appointment”
+Calls class “Donations”
+Public void “writeFile”
+   TRY
+Calls class “FileWriter”
+Writes getFirstName(), getLastName(), getEmail(), getNumber(), getMonth(), getDay(), getYear(), getHour(), getTime(), getMon(), getSeed(), getSoil(), getFert(), getLab(), getTools()
+Tells user that the file was written to
+   CATCH
+	If an error occurrs
+Input class “Display” that implements “DayTaken” and “Welcome”
+Public void “dayDisplay”
+   Outputs the produce from the array
+Input class “Info”
+Static Scanner userS
+Public static string “firstName”
+Public static string “lastName”
+Private static string “email”
+Private static string “number”
+Static void setEmail to set the email variable
+String getEmail to return the email
+Static void setNumber to set the number variable
+String getNumber to return the number
+String getFirstName to return the first name
+String getLastName to return the last name
+Public static void Questions
+   Asks user for first name
+   firstName equals userS.nextLine()
+   Asks user for last name
+   lastName equals userS.nextLine()
+   Asks for email
+   setEmail(userS.nextLine())
+   Asks for number
+   setNumber(userS.nextLine());
+Class “Appointment” that extends “Info”
+Info inf variable
+public static int day
+public static int month
+public static int year
+public static int hour
+public static char time
+int getDay that returns day
+int getMonth that returns month
+int getYear that returns year
+int getHour that returns hour
+char getTime that return time
+Public void showInfo
+   Outputs user’s name
+   Outputs user’s email
+   Outputs user’s number
+   Outputs user’s the date the user chose
+   Outputs user’s the hour chosen
+Class “Donations”
+Scanner userS to read user input
+public static double money set to 0
+public static int seeds set to 0
+public static float soil set to 0
+public static float fert set to 0
+public static int labor set to 0
+public static int tools set to 0
+public static int choice set to 0
+Public void donos
+Outputs what the user would like to donate
+Choice equals user input
+   WHILE Choice equals 0 or is over 7
+	Program will tell user the number is invalid and ask to input again
+   WHILE choice does not equal 7
+	SWITCH choice
+		Case 1 asks how much money the user wants to donate
+		Money adds to itself
+		Break
+		Case 2 asks how many seed bags the user wants to donate
+		Seeds adds to itself
+		Break
+		Case 3 asks how much soil user wants to donate
+		Soil adds to itself
+		Break
+		Case 4 asks how much fertilizer user wants to donate
+Fert adds to itself
+Break
+Case 5 asks how many hours of labor user wants to give
+Labor adds to itself
+Break
+Case 6 asks how many tools the user wants to donate
+Tools adds to itself
+break
+	Asks user what else they would like to donate
+	Choice equals user input
+Outputs a thank you for user
+public Double getMon returns money
+public int getSeed returns seeds
+public Float getSoil returns soil
+public Float getFert returns fert
+public int getLab returns labor
+public int getTools returns tools
+Class “Output” as the main class
+Have public static void main(String args[])
+try Scanner userS
+Info info
+Appointment app 
+Display dis
+Donations dono
+CreateFile file
+Write text
+char choice
+Outputs a welcome for the user
+Calls the dayDisplay void
+Calls the welcomeDisplay void
+Outputs the user to get read to start writing
+Calls Questions void
+DO
+   Asks user for the month they want to go
+   App.month  equals user input
+   Asks user the day they want to go
+   App.day equals user input
+  WHILE app.getMonth equals 2 and app.getDay equals  29 or app.getMonth equals 2 and app.getDay equal 30 or app.getMonth equals 2 and app.getDay equals 31
+	Output the day is invalid and ask user to try again
+App.day equals user input
+   WHILE app.getMonth equals  2 and app.getDay equals 31 or app.getMonth equals 4 and app.getDay eqausl 31 or app.getMonth equals 6 and app.getDay equals 31 or app.getMonth equals and app.getDay equals 31 or app.getMonth equals 11 and app.getDay equals 31
+	Output the day is invalid for the user to try again
+	App.day equals user input
+   WHILE app.getDay is greater than 31
+	Output the day is invalid for the user to try again
+	App.day equals user input
+   Ask user to input the year the user wants to go
+   WHILE app.getYear is greater than 2025
+	Output that the year is invalid and asks the user to try again
+	app.getYear equals user input
+   Ask user to input at hour they want to go
+   App.hour equals user input
+   Ask if the user if they want to go at am or p
+   app.time equals user input
+   IF app.getTime() does not equal a or app.getTime does not equal A or app.getTime does not equal p or app.getTime does not equal P
+	Tell user that the character is invalid
+	App.time equals user input
+   IF app.getMonth equals DayTaken.randMonth and app.getDay equals DayTaken.randDay and app.getHour equals DayTaken.randHour
+	Tell user the date is already taken and to try again
+   WHILE app.getMonth equals DayTaken.randMonth and app.getDay equals DayTaken.randDay and app.getHour equals DayTaken.randHour
+Call showInfo
+Output asking if the user would like to donate
+Choice equals user input
+IF choice does not equal y or choice does not equal Y or choice does not equal n or choice does not equal N
+	Output that the input is invalid and for the user to try again
+	Choice equals user input
+SWITCH choice
+	Case n: Output a thank you to the user
+		 Call fileMake
+		 Call writeFile
+		 Break
+	Case N: Output a thank you to the user
+		 Call fileMake
+		 Call writeFile
+		 Break
+	Case y: Call donos
+		 Output a thank you to the user
+		Call fileMake
+		 Call writeFile
+		 Break
+	Case Y:Call donos
+		 Output a thank you to the user
+		Call fileMake
+		 Call writeFile
+		 Break
